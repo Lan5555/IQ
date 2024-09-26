@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="components/style.css">
+  <title>IQ TES</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header><h1>Test your might</h1></header>
+ <div class="container">
+   <form id="form" onsubmit="query(event)">
+     <h1>Login</h1>
+     <label for="name">Name:</label>
+     <br>
+   <input class="name" type="text"  placeholder =" " required>
+   <br>
+   <label for="key" id="key">Key:</label>
+   <br>
+   <input class="key" type="number" placeholder="" required>
+   <br><br>
+   <button type="submit">Login</button>
+   </form>
+ </div>
+ 
+ <div class="page2">
+   <div class="memContainer">
+     <h1>Test your IQ! time required to complete test, 5 minutes. You are required to submit once done.</h1>
+   </div>
+   <br>
+   <img src="Picsart_24-09-26_02-07-05-393.png" class="pageS">
+   <div class="message">
+     <h2>Start Quiz</h2>
+   </div>
+ </div>
+ 
+ 
+ <div class="bottomSheet">
+   <h1 class="submitted">Number submitted 0/20</h1>
+   <div class="b1"></div>
+
+   <div class="required">
+        <form id="form2" onsubmit="upload(event)">
+   <textarea class="question" placeholder="Type question here" required></textarea>
+   <h2>Options</h2>
+
+   <label for="one">A:</label>
+   <input id="one" required>
+   <br>
+       <label for="two">B:</label>
+       <input id="two" required>
+       <br>
+          <label for="three">C:</label>
+          <input id="three" required>
+          <br>
+             <label for="four">D:</label>
+             <input id="four" required>
+             <br>
+               <label for="answer">Correct Answer:</label>
+               <input type="number" id="answer" placeholder="Type 0 for A. 1 for B. 2 for C and 3 for D" required>
+             <button type="submit">Submit</button>
+   </form>
+             </div>
+ </div>
+ 
+ <div class="page3">
+   <h1 class="answered">Questions answered:<br> 0 / 20</h1>
+   <div class="time">
+     <h2 class="currentTime">5:00</h2>
+   </div>
+   <br>
+    <textarea class="QC" readonly></textarea>
+    <br>
+    <div class="response">
+    <input type="radio" name="answer" value="0" id="first">
+    <label for="first"></label><br>
+          <input type="radio" name="answer" value="1" id="sec">
+          <label for="sec"></label><br>
+        <input type="radio" name="answer" value="2"id ="third">
+            <label for="third"></label>
+            <br>
+            
+             <input type="radio" name="answer" value="3" id="forth">
+                <label for="forth">
+                </label><br>
+    </div>
+    <div class="navigator">
+    <button class="pre">Previous</button>
+    <button class="next">Next</button>
+    <button class="sub">Submit</button>
+    </div>
+ </div>
+ 
+ 
+ <div class="page4">
+   <div class="card">
+     <h1>Result</h1>
+     <h1 class="name1">Lan</h1>
+     <p class="score">26%</p>
+     <h6 class="remark">Congratulations</h6>
+   </div>
+ </div>
+ 
+ 
+ <div class="loader"></div>
+ <div class="popUp">
+   <h3>Select mode</h3>
+   <select id="mode">
+     <option value="solo">Solo</option>
+     <option value="vs">VS</option>
+   </select>
+   <br>
+   <button class="begin" onclick="confirm()">Start</button>
+   <br>
+   <button class="results">Compare results</button>
+ </div>
+ <div class="save">
+   <h2>Confirm mode</h2>
+   <br>
+   <button onclick="startGame()">Confirm</button>
+ </div>
+ 
+ <div class="displayResult">
+   <div class="N">
+     <h1 class="name3"></h1>
+     <p class="score3"></p>
+   </div>
+   
+   <div class="E">
+     <h1 class="name2"></h1>
+     <p class="score1"></p>
+   </div>
+   <button class="back">Back</button>
+ </div>
+  <!-- Project -->
+     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+     <script src="components/main.js"></script>
+  <script src="main.js"></script>
+  
+</body>
+</html>

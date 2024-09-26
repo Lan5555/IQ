@@ -1,0 +1,160 @@
+*{
+  transition: all 0.5s ease-out;
+  font-family: 'playfair Display',serif;
+  
+}
+:root{
+  --shadow-box: 0 0.15rem 1.75rem 0 rgba(33 40 50 / 15%);
+  --shadow-box2: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width:600px){
+.toast{
+  width:70%;
+  height:90px;
+  position: fixed;
+  top:0;
+  overflow: auto;
+  box-shadow: var(--shadow-box);
+  display: none;
+  border-radius: 5px;
+  animation:slideIn 0.3s ease-in-out;
+}
+.progressBar{
+  position: absolute;
+  width:100%;
+  bottom: 0;
+  height:5px;
+  background-color: white;
+  
+  }
+
+  .header{
+    text-align: center;
+    font-size: 14pt;
+  }
+  .text{
+    padding: 5px;
+    font-size: 11pt;
+  }
+  
+
+}
+@media only screen and (min-width:542px){
+  .toast {
+    width: 40%;
+    height: 90px;
+    box-shadow: var(--shadow-box);
+    position: fixed;
+    top:0;
+    display: none;
+    border-radius:5px;
+    animation:slideIn 0.3s ease-in-out;
+  }
+  .progressBar{
+  position: absolute;
+  width:100%;
+  bottom: 0;
+  height:5px;
+  background-color: white;
+  
+  }
+
+  .header{
+    text-align: center;
+    font-size: 14pt;
+  }
+  .text{
+    padding: 5px;
+    
+  }
+}
+
+
+@keyframes slideIn{
+  from {
+    transform: translateX(-400px);
+  }to{
+    transform: translateX(0px);
+  }
+}
+.floating{
+  width: 60px;
+  height:60px;
+  border-radius:40%;
+  background-color: plum;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  border:none;
+  position:fixed;
+  bottom: 80px;
+  right:30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+.floating:hover{
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  
+}
+.floating:active{
+  background-color: black;
+}
+
+.listtile{
+  overflow-y: auto;
+  width:100%;
+  padding: 10px;
+  border:none;
+  height:auto;
+  display: flex;
+  height:30px;
+  margin-bottom: 5px;
+  box-shadow: var(--shadow-box);
+  margin-top: 5px;
+}
+.title{
+  margin-top: 5px;
+  position: absolute;
+  left:70px;
+}
+
+.leading{
+  position: absolute;
+  left:20px;
+  margin-top: 5px;
+}
+.trailing{
+  position: absolute;
+  right:30px;
+  margin-top: 7px;
+  font-size: 10pt;
+  font-weight: bold;
+}
+.con{
+  box-shadow:var(--shadow-box);
+  background-color: white;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.navigator{
+  display:flex;
+  box-shadow:var(--shadow-box);
+  background-color: white;
+  padding: 10px;
+  width: 90%;
+  position: absolute;
+  top:70%;
+  justify-content: center;
+}
+.navigator button{
+  margin-left: 20px;
+  padding:10px;
+  border:none;
+  background-color: plum;
+  border-radius: 20px;
+  box-shadow: var(--shadow-box2);
+  color:white;
+}
