@@ -332,7 +332,7 @@ firebase.initializeApp(firebaseConfig);
   };
   
   
-  let minute = 4;
+  let minute = 14;
   let seconds = 60;
   let percent;
   
